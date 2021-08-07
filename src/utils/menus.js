@@ -1,11 +1,10 @@
-import { getRequest } from './api'
+import { getRequest } from '@/utils/api'
 
 export const initMenu = (router, store) => {
   if (store.state.routes.length > 0) {
     return
   }
-
-  getRequest('/system/menu').then(data => {
+  getRequest('/system/cfg/menu').then(data => {
     if (data) {
       // 格式化Router
       const fmtRoutes = formatRoutes(data)
@@ -13,8 +12,6 @@ export const initMenu = (router, store) => {
       router.addRoutes(fmtRoutes)
       // 将数据存入vuex
       store.commit('initRoutes', fmtRoutes)
-      // 连接WebSocket
-      store.dispatch('connect')
     }
   })
 }
