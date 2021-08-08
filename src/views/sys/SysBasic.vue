@@ -11,8 +11,19 @@
 </template>
 
 <script>
+import PosMana from '../../components/sys/basic/PosMana'
+
 export default {
-  name: 'SysBasic'
+  name: 'SysBasic',
+  data () {
+    return {
+      activeName: 'DepMana'
+    }
+  },
+  components: {
+    PosMana
+  }
+
 }
 </script>
 

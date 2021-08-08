@@ -57,7 +57,7 @@ export default {
               const tokenStr = resp.obj.tokenHead + resp.obj.token
               window.sessionStorage.setItem('tokenStr', tokenStr)
               const path = this.$route.query.redirect
-              this.$router.replace((path === '/' || path === undefined) ? '/home' : path)
+              this.$router.replace((<path></path> === '/' || path === undefined) ? '/home' : path)
             }
           })
         } else {
