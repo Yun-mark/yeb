@@ -14,6 +14,8 @@
 import PosMana from '../../components/sys/basic/PosMana'
 import JoblevelMana from '../../components/sys/basic/JoblevelMana'
 import PermissMana from '../../components/sys/basic/PermissMana'
+import DepMana from '../../components/sys/basic/DepMana'
+import EcMana from '../../components/sys/basic/EcMana'
 export default {
   name: 'SysBasic',
   data () {
@@ -24,7 +26,9 @@ export default {
   components: {
     PosMana,
     JoblevelMana,
-    PermissMana
+    PermissMana,
+    DepMana,
+    EcMana
   }
 
 }
