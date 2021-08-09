@@ -59,10 +59,18 @@ export const getRequest = (url, params) => {
     data: params
   })
 }
-// 传送json格式的post请求
+// 传送json格式的delete请求
 export const deleteRequest = (url, params) => {
   return axios({
     method: 'delete',
+    url: `${base}${url}`,
+    data: params
+  })
+}
+// 传送json格式的post请求
+export const putRequest = (url, params) => {
+  return axios({
+    method: 'PUT',
     url: `${base}${url}`,
     data: params
   })

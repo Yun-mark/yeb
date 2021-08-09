@@ -12,7 +12,8 @@
 
 <script>
 import PosMana from '../../components/sys/basic/PosMana'
-
+import JoblevelMana from '../../components/sys/basic/JoblevelMana'
+import PermissMana from '../../components/sys/basic/PermissMana'
 export default {
   name: 'SysBasic',
   data () {
@@ -21,7 +22,9 @@ export default {
     }
   },
   components: {
-    PosMana
+    PosMana,
+    JoblevelMana,
+    PermissMana
   }
 
 }
